@@ -2,12 +2,14 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-message = ""
-
 @app.get("/")
 async def root():
-    return {"message": message}
+    if message:
+        return {"message": message}
+    else:
+        return {"message": "Pico is offline"}
 
 @app.post("/")
-async def receiver(received):
-    message = received
+async def receiver(pico_status):
+    global message 
+    message = pico_status
