@@ -3,8 +3,7 @@
 # platform: win-64
 annotated-types==0.6.0
 anyio==4.2.0
-indexed-bzip2==1.0.8
-#bzip2==1.0.8
+bzip2==1.1.0
 ca-certificates==2023.12.12
 click==8.1.7
 colorama==0.4.6
