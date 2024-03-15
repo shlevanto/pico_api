@@ -2,6 +2,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+message = ""
+
 @app.get("/")
 async def root():
     if message:
